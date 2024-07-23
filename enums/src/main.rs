@@ -25,7 +25,7 @@ enum IpAddr {
     V6(String),
 }
 
-
+#[derive(Debug)]
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -41,7 +41,7 @@ struct ChangeColorMessage(i32, i32, i32);
 */
 impl Message {
     fn call(&self) {
-        //
+        //vec!
     }
 }
 
@@ -52,7 +52,8 @@ fn main() {
     let loopback = IpAddr::V6(String::from("::1"));
 
     let m = Message::Write(String::from("hello"));
-    m.call()
+    println!("{:?}", m);
+    m.call();
 }
 
 //fn route(ip_kind: IpAddrKind) {}
