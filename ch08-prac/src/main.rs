@@ -28,4 +28,18 @@ fn main() {
             println!("{}", key);
         }
     }
+    
+    let mo = vec!["a", "e", "i", "o", "u"];
+
+    let s1 = String::from("test");
+    let tmp = &s1[0..1];
+    let s2 = &s1[1..];
+
+    if mo.contains(&tmp) {
+        let result = format!("{s1}-hay");
+        println!("{result}");
+    } else {
+        let result = format!("{s2}-{tmp}ay");
+        println!("{result}");
+    }
 }
